@@ -29,15 +29,16 @@ jobs:
 
       - name: Build all
         run: |
+          lrelease *.pro
           qmake -spec win32-g++
           mingw32-make -j8
 
       - name: Upload build asserts
         uses: actions/upload-artifact@v4
         with:
-          name: libhelloworld_mingw
+          name: libtimestamp_mingw
           path: |
-            ./release/helloworld.dll
+            ./release/timestamp.dll
 
   windows_msvc2019:
     runs-on: windows-2022
@@ -63,13 +64,14 @@ jobs:
       - name: Build all
         run: |
           c:/Windows/system32/WindowsPowerShell/v1.0/powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -File "./tools/replacer.ps1" -cc_info "msvc" -tpath ./plugininterface/plugininterface.json.temp -opath ./plugininterface/plugininterface.json
-          qmake helloworld.pro -tp vc
-          msbuild helloworld.vcxproj /p:Configuration=Release /p:Platform=x64 /p:BuildInParallel=false
-          cp ./release/helloworld.dll ./release/helloworld.msvc.dll
+          lrelease timestamp.pro
+          qmake timestamp.pro -tp vc
+          msbuild timestamp.vcxproj /p:Configuration=Release /p:Platform=x64 /p:BuildInParallel=false
+          cp ./release/timestamp.dll ./release/timestamp.msvc.dll
 
       - name: Upload build asserts
         uses: actions/upload-artifact@v4
         with:
-          name: libhelloworld_msvc
+          name: libtimestamp_msvc
           path: |
-            ./release/helloworld.msvc.dll
+            ./release/timestamp.msvc.dll

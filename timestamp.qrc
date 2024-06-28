@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/lang">
+        <file>timestamp_zh_CN.qm</file>
+        <file>timestamp_en_US.qm</file>
+    </qresource>
+</RCC>
