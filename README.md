@@ -1,3 +1,3 @@
-# Plugin template
+# Plugin timestamp
 
-Plugin template repository for QuardCRT.
+This is a plugin to convert timestamps for QuardCRT.
