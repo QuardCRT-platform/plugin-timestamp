@@ -5,6 +5,7 @@
 
 #define PLUGIN_NAME    "Timestamp"
 #define PLUGIN_VERSION "0.0.1"
+#define PLUGIN_WEBSITE "https://github.com/QuardCRT-platform/plugin-timestamp"
 
 class Timestamp : public PluginInterface
 {
@@ -26,6 +27,7 @@ public:
     QMap<QString,void *> metaObject() {
         QMap<QString,void *> ret;
         ret.insert("QAction", (void *)m_action);
+        ret.insert("website", (void *)(&m_website));
         return ret;
     }
 
@@ -34,6 +36,7 @@ public:
 
 private:
     QAction *m_action;
+    QString m_website = QString(PLUGIN_WEBSITE);
 };
 
 #endif /* TIMESTAMP_H_ */
