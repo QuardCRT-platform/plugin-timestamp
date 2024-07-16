@@ -92,6 +92,13 @@
     </layout>
    </item>
    <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="label_6">
      <property name="text">
       <string>Input</string>
@@ -100,15 +107,22 @@
    </item>
    <item>
     <layout class="QGridLayout" name="gridLayout_2">
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_9">
-       <property name="text">
-        <string>Millisecond timestamp</string>
+     <item row="6" column="1" colspan="4">
+      <widget class="QLineEdit" name="lineEditDiffCurTimemm">
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
-     <item row="1" column="1">
-      <widget class="QLineEdit" name="lineEditInmts">
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Date</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEditInts">
        <property name="readOnly">
         <bool>true</bool>
        </property>
@@ -128,10 +142,10 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="2">
-      <widget class="QLabel" name="label_12">
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_15">
        <property name="text">
-        <string>Date</string>
+        <string>Difference from current time</string>
        </property>
       </widget>
      </item>
@@ -155,24 +169,45 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="lineEditInts">
+     <item row="4" column="1" colspan="4">
+      <widget class="QLineEdit" name="lineEditDiffCurTime">
        <property name="readOnly">
         <bool>true</bool>
        </property>
       </widget>
      </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_7">
+     <item row="2" column="2">
+      <widget class="QLabel" name="label_12">
        <property name="text">
-        <string>Timestamp</string>
+        <string>Date</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="2">
-      <widget class="QLabel" name="label_8">
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_14">
+       <property name="text">
+        <string>Difference from current time</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="label_10">
        <property name="text">
         <string>Date</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_13">
+       <property name="text">
+        <string>Difference from current time</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineEditInmts">
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -196,10 +231,24 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="2">
-      <widget class="QLabel" name="label_10">
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_9">
        <property name="text">
-        <string>Date</string>
+        <string>Millisecond timestamp</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Timestamp</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1" colspan="4">
+      <widget class="QLineEdit" name="lineEditDiffCurTimem">
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -220,6 +269,13 @@
        </property>
        <property name="displayFormat">
         <string>yyyy/M/d HH:mm:ss</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="5">
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
        </property>
       </widget>
      </item>

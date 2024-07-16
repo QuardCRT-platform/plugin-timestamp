@@ -33,35 +33,35 @@ This is a plugin to convert timestamps.</source>
     </message>
     <message>
         <location filename="timestampshowdialog.ui" line="26"/>
-        <location filename="timestampshowdialog.ui" line="168"/>
+        <location filename="timestampshowdialog.ui" line="229"/>
         <source>Timestamp</source>
         <translation>时间戳</translation>
     </message>
     <message>
         <location filename="timestampshowdialog.ui" line="40"/>
-        <location filename="timestampshowdialog.ui" line="134"/>
-        <location filename="timestampshowdialog.ui" line="175"/>
-        <location filename="timestampshowdialog.ui" line="202"/>
+        <location filename="timestampshowdialog.ui" line="109"/>
+        <location filename="timestampshowdialog.ui" line="167"/>
+        <location filename="timestampshowdialog.ui" line="181"/>
         <source>Date</source>
         <translation>日期</translation>
     </message>
     <message>
         <location filename="timestampshowdialog.ui" line="47"/>
-        <location filename="timestampshowdialog.ui" line="106"/>
+        <location filename="timestampshowdialog.ui" line="222"/>
         <source>Millisecond timestamp</source>
         <translation>毫秒时间戳</translation>
     </message>
     <message>
         <location filename="timestampshowdialog.ui" line="61"/>
-        <location filename="timestampshowdialog.ui" line="120"/>
+        <location filename="timestampshowdialog.ui" line="123"/>
         <source>Microsecond timestamp</source>
         <translation>微秒时间戳</translation>
     </message>
     <message>
         <location filename="timestampshowdialog.ui" line="88"/>
-        <location filename="timestampshowdialog.ui" line="154"/>
-        <location filename="timestampshowdialog.ui" line="195"/>
-        <location filename="timestampshowdialog.ui" line="222"/>
+        <location filename="timestampshowdialog.ui" line="157"/>
+        <location filename="timestampshowdialog.ui" line="215"/>
+        <location filename="timestampshowdialog.ui" line="252"/>
         <source>yyyy/M/d HH:mm:ss</source>
         <translation>yyyy/M/d HH:mm:ss</translation>
     </message>
@@ -71,7 +71,14 @@ This is a plugin to convert timestamps.</source>
         <translation>输入</translation>
     </message>
     <message>
-        <location filename="timestampshowdialog.ui" line="244"/>
+        <location filename="timestampshowdialog.ui" line="137"/>
+        <location filename="timestampshowdialog.ui" line="174"/>
+        <location filename="timestampshowdialog.ui" line="188"/>
+        <source>Difference from current time</source>
+        <translation>与当前时间的相差</translation>
+    </message>
+    <message>
+        <location filename="timestampshowdialog.ui" line="281"/>
         <source>Close</source>
         <translation>关闭</translation>
     </message>
