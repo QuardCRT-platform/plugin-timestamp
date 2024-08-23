@@ -4,7 +4,7 @@
 #include "plugininterface.h"
 
 #define PLUGIN_NAME    "Timestamp"
-#define PLUGIN_VERSION "0.0.2"
+#define PLUGIN_VERSION "0.0.3"
 #define PLUGIN_WEBSITE "https://github.com/QuardCRT-platform/plugin-timestamp"
 
 class Timestamp : public PluginInterface

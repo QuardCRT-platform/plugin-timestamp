@@ -1,6 +1,7 @@
 
 #include <QTimer>
 #include <QDateTime>
+#include <QClipboard>
 
 #include "timestampshowdialog.h"
 #include "ui_timestampshowdialog.h"
@@ -41,6 +42,37 @@ TimestampShowDialog::TimestampShowDialog(uint64_t timestamp, QWidget *parent)
         ui->dateTimeEditInmmdt->setDateTime(inmmDt);
         dtmms = timestamp;
     }
+
+    connect(ui->toolButtonCPNd, &QToolButton::clicked, this,[&](){
+        QApplication::clipboard()->setText(ui->dateTimeEditNow->dateTime().toString("yyyy-MM-dd hh:mm:ss"));
+    });
+    connect(ui->toolButtonCPNt, &QToolButton::clicked, this,[&](){
+        QApplication::clipboard()->setText(ui->lineEditNowts->text());
+    });
+    connect(ui->toolButtonCPNmt, &QToolButton::clicked, this,[&](){
+        QApplication::clipboard()->setText(ui->lineEditNowmts->text());
+    });
+    connect(ui->toolButtonCPNmmt, &QToolButton::clicked, this,[&](){
+        QApplication::clipboard()->setText(ui->lineEditNowmmts->text());
+    });
+    connect(ui->toolButtonCPtd, &QToolButton::clicked, this,[&](){
+        QApplication::clipboard()->setText(ui->dateTimeEditIndt->dateTime().toString("yyyy-MM-dd hh:mm:ss"));
+    });
+    connect(ui->toolButtonCPmtd, &QToolButton::clicked, this,[&](){
+        QApplication::clipboard()->setText(ui->dateTimeEditInmdt->dateTime().toString("yyyy-MM-dd hh:mm:ss"));
+    });
+    connect(ui->toolButtonCPmmtd, &QToolButton::clicked, this,[&](){
+        QApplication::clipboard()->setText(ui->dateTimeEditInmmdt->dateTime().toString("yyyy-MM-dd hh:mm:ss"));
+    });
+    connect(ui->toolButtonCPts, &QToolButton::clicked, this,[&](){
+        QApplication::clipboard()->setText(ui->lineEditDiffCurTime->text());
+    });
+    connect(ui->toolButtonCPmts, &QToolButton::clicked, this,[&](){
+        QApplication::clipboard()->setText(ui->lineEditDiffCurTimem->text());
+    });
+    connect(ui->toolButtonCPmmts, &QToolButton::clicked, this,[&](){
+        QApplication::clipboard()->setText(ui->lineEditDiffCurTimemm->text());
+    });
 
     connect(ui->pushButtonClose, &QPushButton::clicked, this, [&](){
         accept();
