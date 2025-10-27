@@ -38,7 +38,7 @@ jobs:
           make
 
       - name: Upload build asserts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: libtimestamp
           path: |
@@ -71,7 +71,7 @@ jobs:
           cp libtimestamp.dylib libtimestamp.arm64.dylib
 
       - name: Upload build asserts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: libtimestamp_arm64
           path: |
