@@ -2,6 +2,7 @@
 #include <QTimer>
 #include <QDateTime>
 #include <QClipboard>
+#include <QStyle>
 
 #include "timestampshowdialog.h"
 #include "ui_timestampshowdialog.h"
@@ -11,6 +12,22 @@ TimestampShowDialog::TimestampShowDialog(uint64_t timestamp, QWidget *parent)
     , ui(new Ui::TimestampShowDialog)
 {
     ui->setupUi(this);
+
+    // Compute a fixed width that fits exactly 3 numeric characters in current font/style.
+    auto setThreeDigitFixedWidth = [](QLineEdit *lineEdit) {
+        const int textWidth = lineEdit->fontMetrics().horizontalAdvance(QStringLiteral("000"));
+        const int frameWidth = lineEdit->style()->pixelMetric(QStyle::PM_DefaultFrameWidth, nullptr, lineEdit);
+        const QMargins margins = lineEdit->textMargins();
+        const int totalWidth = textWidth + margins.left() + margins.right() + (frameWidth * 2) + 4;
+        lineEdit->setFixedWidth(totalWidth);
+    };
+    setThreeDigitFixedWidth(ui->lineEditInmdtMs);
+    setThreeDigitFixedWidth(ui->lineEditInmmdtMs);
+    setThreeDigitFixedWidth(ui->lineEditInmmdtUs);
+
+    auto formatDateTime = [](const QDateTime &dt) {
+        return dt.toString("yyyy-MM-dd hh:mm:ss");
+    };
 
     QDateTime dt = QDateTime::currentDateTime();
     ui->dateTimeEditNow->setDateTime(dt);
@@ -33,6 +50,7 @@ TimestampShowDialog::TimestampShowDialog(uint64_t timestamp, QWidget *parent)
     if(inmDt.isValid() && inmDt <= maxDt) {
         ui->lineEditInmts->setText(QString::number(timestamp));
         ui->dateTimeEditInmdt->setDateTime(inmDt);
+        ui->lineEditInmdtMs->setText(QString::number(timestamp % 1000ULL));
         dtms = timestamp;
     }
 
@@ -40,11 +58,14 @@ TimestampShowDialog::TimestampShowDialog(uint64_t timestamp, QWidget *parent)
     if(inmmDt.isValid() && inmmDt <= maxDt) {
         ui->lineEditInmmts->setText(QString::number(timestamp));
         ui->dateTimeEditInmmdt->setDateTime(inmmDt);
+        const uint64_t inSecondUs = timestamp % 1000000ULL;
+        ui->lineEditInmmdtMs->setText(QString::number(inSecondUs / 1000ULL));
+        ui->lineEditInmmdtUs->setText(QString::number(inSecondUs % 1000ULL));
         dtmms = timestamp;
     }
 
     connect(ui->toolButtonCPNd, &QToolButton::clicked, this,[&](){
-        QApplication::clipboard()->setText(ui->dateTimeEditNow->dateTime().toString("yyyy-MM-dd hh:mm:ss"));
+        QApplication::clipboard()->setText(formatDateTime(ui->dateTimeEditNow->dateTime()));
     });
     connect(ui->toolButtonCPNt, &QToolButton::clicked, this,[&](){
         QApplication::clipboard()->setText(ui->lineEditNowts->text());
@@ -56,13 +77,13 @@ TimestampShowDialog::TimestampShowDialog(uint64_t timestamp, QWidget *parent)
         QApplication::clipboard()->setText(ui->lineEditNowmmts->text());
     });
     connect(ui->toolButtonCPtd, &QToolButton::clicked, this,[&](){
-        QApplication::clipboard()->setText(ui->dateTimeEditIndt->dateTime().toString("yyyy-MM-dd hh:mm:ss"));
+        QApplication::clipboard()->setText(formatDateTime(ui->dateTimeEditIndt->dateTime()));
     });
     connect(ui->toolButtonCPmtd, &QToolButton::clicked, this,[&](){
-        QApplication::clipboard()->setText(ui->dateTimeEditInmdt->dateTime().toString("yyyy-MM-dd hh:mm:ss"));
+        QApplication::clipboard()->setText(formatDateTime(ui->dateTimeEditInmdt->dateTime()) + "." + ui->lineEditInmdtMs->text());
     });
     connect(ui->toolButtonCPmmtd, &QToolButton::clicked, this,[&](){
-        QApplication::clipboard()->setText(ui->dateTimeEditInmmdt->dateTime().toString("yyyy-MM-dd hh:mm:ss"));
+        QApplication::clipboard()->setText(formatDateTime(ui->dateTimeEditInmmdt->dateTime()) + "." + ui->lineEditInmmdtMs->text() + "." + ui->lineEditInmmdtUs->text());
     });
     connect(ui->toolButtonCPts, &QToolButton::clicked, this,[&](){
         QApplication::clipboard()->setText(ui->lineEditDiffCurTime->text());

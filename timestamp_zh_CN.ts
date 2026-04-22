@@ -33,35 +33,35 @@ This is a plugin to convert timestamps.</source>
     </message>
     <message>
         <location filename="timestampshowdialog.ui" line="60"/>
-        <location filename="timestampshowdialog.ui" line="257"/>
+        <location filename="timestampshowdialog.ui" line="232"/>
         <source>Timestamp</source>
         <translation>时间戳</translation>
     </message>
     <message>
         <location filename="timestampshowdialog.ui" line="88"/>
-        <location filename="timestampshowdialog.ui" line="236"/>
-        <location filename="timestampshowdialog.ui" line="250"/>
-        <location filename="timestampshowdialog.ui" line="306"/>
+        <location filename="timestampshowdialog.ui" line="155"/>
+        <location filename="timestampshowdialog.ui" line="183"/>
+        <location filename="timestampshowdialog.ui" line="218"/>
         <source>Date</source>
         <translation>日期</translation>
     </message>
     <message>
         <location filename="timestampshowdialog.ui" line="95"/>
-        <location filename="timestampshowdialog.ui" line="264"/>
+        <location filename="timestampshowdialog.ui" line="190"/>
         <source>Millisecond timestamp</source>
         <translation>毫秒时间戳</translation>
     </message>
     <message>
         <location filename="timestampshowdialog.ui" line="67"/>
-        <location filename="timestampshowdialog.ui" line="209"/>
+        <location filename="timestampshowdialog.ui" line="148"/>
         <source>Microsecond timestamp</source>
         <translation>微秒时间戳</translation>
     </message>
     <message>
         <location filename="timestampshowdialog.ui" line="39"/>
-        <location filename="timestampshowdialog.ui" line="168"/>
-        <location filename="timestampshowdialog.ui" line="195"/>
-        <location filename="timestampshowdialog.ui" line="229"/>
+        <location filename="timestampshowdialog.ui" line="290"/>
+        <location filename="timestampshowdialog.ui" line="343"/>
+        <location filename="timestampshowdialog.ui" line="363"/>
         <source>yyyy/M/d HH:mm:ss</source>
         <translation>yyyy/M/d HH:mm:ss</translation>
     </message>
@@ -70,12 +70,12 @@ This is a plugin to convert timestamps.</source>
         <location filename="timestampshowdialog.ui" line="102"/>
         <location filename="timestampshowdialog.ui" line="109"/>
         <location filename="timestampshowdialog.ui" line="116"/>
-        <location filename="timestampshowdialog.ui" line="313"/>
-        <location filename="timestampshowdialog.ui" line="320"/>
-        <location filename="timestampshowdialog.ui" line="327"/>
-        <location filename="timestampshowdialog.ui" line="334"/>
-        <location filename="timestampshowdialog.ui" line="341"/>
-        <location filename="timestampshowdialog.ui" line="348"/>
+        <location filename="timestampshowdialog.ui" line="141"/>
+        <location filename="timestampshowdialog.ui" line="297"/>
+        <location filename="timestampshowdialog.ui" line="304"/>
+        <location filename="timestampshowdialog.ui" line="370"/>
+        <location filename="timestampshowdialog.ui" line="377"/>
+        <location filename="timestampshowdialog.ui" line="384"/>
         <source>Copy</source>
         <translation>复制</translation>
     </message>
@@ -85,14 +85,14 @@ This is a plugin to convert timestamps.</source>
         <translation>输入</translation>
     </message>
     <message>
-        <location filename="timestampshowdialog.ui" line="175"/>
-        <location filename="timestampshowdialog.ui" line="243"/>
-        <location filename="timestampshowdialog.ui" line="299"/>
+        <location filename="timestampshowdialog.ui" line="162"/>
+        <location filename="timestampshowdialog.ui" line="204"/>
+        <location filename="timestampshowdialog.ui" line="225"/>
         <source>Difference from current time</source>
         <translation>与当前时间的相差</translation>
     </message>
     <message>
-        <location filename="timestampshowdialog.ui" line="370"/>
+        <location filename="timestampshowdialog.ui" line="427"/>
         <source>Close</source>
         <translation>关闭</translation>
     </message>

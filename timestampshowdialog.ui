@@ -135,82 +135,143 @@
    </item>
    <item>
     <layout class="QGridLayout" name="gridLayout_2">
-     <item row="2" column="1">
-      <widget class="QLineEdit" name="lineEditInmmts">
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1" colspan="4">
-      <widget class="QLineEdit" name="lineEditDiffCurTimem">
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="4">
-      <widget class="QDateTimeEdit" name="dateTimeEditInmdt">
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-       <property name="dateTime">
-        <datetime>
-         <hour>7</hour>
-         <minute>30</minute>
-         <second>0</second>
-         <year>1970</year>
-         <month>1</month>
-         <day>1</day>
-        </datetime>
-       </property>
-       <property name="displayFormat">
-        <string>yyyy/M/d HH:mm:ss</string>
+     <item row="4" column="6">
+      <widget class="QToolButton" name="toolButtonCPmmtd">
+       <property name="text">
+        <string>Copy</string>
        </property>
       </widget>
      </item>
      <item row="4" column="0">
-      <widget class="QLabel" name="label_13">
-       <property name="text">
-        <string>Difference from current time</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="4">
-      <widget class="QDateTimeEdit" name="dateTimeEditIndt">
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-       <property name="dateTime">
-        <datetime>
-         <hour>7</hour>
-         <minute>30</minute>
-         <second>0</second>
-         <year>1970</year>
-         <month>1</month>
-         <day>1</day>
-        </datetime>
-       </property>
-       <property name="displayFormat">
-        <string>yyyy/M/d HH:mm:ss</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0" colspan="5">
-      <widget class="Line" name="line">
-       <property name="orientation">
-        <enum>Qt::Orientation::Horizontal</enum>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
       <widget class="QLabel" name="label_11">
        <property name="text">
         <string>Microsecond timestamp</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="4">
+     <item row="4" column="2">
+      <widget class="QLabel" name="label_12">
+       <property name="text">
+        <string>Date</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_15">
+       <property name="text">
+        <string>Difference from current time</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="lineEditInmts">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEditInts">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Date</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>Millisecond timestamp</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="lineEditInmmts">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="label_14">
+       <property name="text">
+        <string>Difference from current time</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" colspan="5">
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>Date</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_13">
+       <property name="text">
+        <string>Difference from current time</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Timestamp</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="5">
+      <widget class="QLineEdit" name="lineEditInmmdtUs">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="maxLength">
+        <number>3</number>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="4">
+      <widget class="QLineEdit" name="lineEditInmmdtMs">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="maxLength">
+        <number>3</number>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
       <widget class="QDateTimeEdit" name="dateTimeEditInmmdt">
        <property name="readOnly">
         <bool>true</bool>
@@ -230,91 +291,14 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="2">
-      <widget class="QLabel" name="label_10">
-       <property name="text">
-        <string>Date</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0">
-      <widget class="QLabel" name="label_14">
-       <property name="text">
-        <string>Difference from current time</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2">
-      <widget class="QLabel" name="label_12">
-       <property name="text">
-        <string>Date</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_7">
-       <property name="text">
-        <string>Timestamp</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_9">
-       <property name="text">
-        <string>Millisecond timestamp</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="1" colspan="4">
-      <widget class="QLineEdit" name="lineEditDiffCurTimemm">
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QLineEdit" name="lineEditInmts">
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="lineEditInts">
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1" colspan="4">
-      <widget class="QLineEdit" name="lineEditDiffCurTime">
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="0">
-      <widget class="QLabel" name="label_15">
-       <property name="text">
-        <string>Difference from current time</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QLabel" name="label_8">
-       <property name="text">
-        <string>Date</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="5">
+     <item row="0" column="6">
       <widget class="QToolButton" name="toolButtonCPtd">
        <property name="text">
         <string>Copy</string>
        </property>
       </widget>
      </item>
-     <item row="1" column="5">
+     <item row="2" column="6">
       <widget class="QToolButton" name="toolButtonCPmtd">
        <property name="text">
         <string>Copy</string>
@@ -322,30 +306,103 @@
       </widget>
      </item>
      <item row="2" column="5">
-      <widget class="QToolButton" name="toolButtonCPmmtd">
+      <widget class="QLineEdit" name="lineEditInmdtMs">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="text">
-        <string>Copy</string>
+        <string/>
+       </property>
+       <property name="maxLength">
+        <number>3</number>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
-     <item row="4" column="5">
+     <item row="0" column="3" colspan="3">
+      <widget class="QDateTimeEdit" name="dateTimeEditIndt">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="dateTime">
+        <datetime>
+         <hour>7</hour>
+         <minute>30</minute>
+         <second>0</second>
+         <year>1970</year>
+         <month>1</month>
+         <day>1</day>
+        </datetime>
+       </property>
+       <property name="displayFormat">
+        <string>yyyy/M/d HH:mm:ss</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3" colspan="2">
+      <widget class="QDateTimeEdit" name="dateTimeEditInmdt">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="dateTime">
+        <datetime>
+         <hour>7</hour>
+         <minute>30</minute>
+         <second>0</second>
+         <year>1970</year>
+         <month>1</month>
+         <day>1</day>
+        </datetime>
+       </property>
+       <property name="displayFormat">
+        <string>yyyy/M/d HH:mm:ss</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="6">
       <widget class="QToolButton" name="toolButtonCPts">
        <property name="text">
         <string>Copy</string>
        </property>
       </widget>
      </item>
-     <item row="5" column="5">
+     <item row="7" column="6">
       <widget class="QToolButton" name="toolButtonCPmts">
        <property name="text">
         <string>Copy</string>
        </property>
       </widget>
      </item>
-     <item row="6" column="5">
+     <item row="8" column="6">
       <widget class="QToolButton" name="toolButtonCPmmts">
        <property name="text">
         <string>Copy</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1" colspan="5">
+      <widget class="QLineEdit" name="lineEditDiffCurTime">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1" colspan="5">
+      <widget class="QLineEdit" name="lineEditDiffCurTimem">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1" colspan="5">
+      <widget class="QLineEdit" name="lineEditDiffCurTimemm">
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
